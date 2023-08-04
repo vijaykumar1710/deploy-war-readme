@@ -100,6 +100,42 @@ This guide provides detailed instructions on how to host and run a `.war` file o
     nginx -s reload
     ```
 
+## Step 6: Setting Up Port Forwarding
+
+### On Your Windows Firewall
+
+1. Search for "Windows Defender Firewall" in the Windows search bar and open it.
+
+2. Click on "Advanced settings" on the left sidebar.
+
+3. In the "Inbound Rules" section, click "New Rule..." on the right sidebar.
+
+4. Choose the "Port" option and click "Next."
+
+5. Select "TCP" and enter `8081` as the specific local ports. Click "Next."
+
+6. Choose "Allow the connection" and click "Next."
+
+7. Provide a name for the rule, e.g., "Port Forwarding for My Application." Click "Finish" to create the rule.
+
+### On Your Network Router
+
+1. Open a web browser and enter your router's IP address in the address bar. This is usually something like `192.168.1.1`.
+
+2. Log in to your router using the administrator credentials.
+
+3. Look for a section related to "Port Forwarding" or "Virtual Server." The wording may differ depending on your router.
+
+4. Add a new port forwarding rule:
+   - External Port: Choose a port number (e.g., `8080`) that external users will use to access your application.
+   - Internal IP Address: Enter the internal IP address of your Windows machine (e.g., `192.168.1.100`).
+   - Internal Port: Enter `8081`, the port your application is running on.
+   - Protocol: Select "TCP."
+
+5. Save or apply the changes. Your router will now forward external requests on the chosen port to your Windows machine.
+
+Please note that the process for setting up port forwarding can vary based on the router's make and model. Refer to your router's documentation for specific instructions.
+
 ## Step 7: Accessing Your Application
 
 1. Edit your system's `hosts` file (`C:\Windows\System32\drivers\etc\hosts`) and add an entry to map your domain to `localhost`:
