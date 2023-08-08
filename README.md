@@ -23,7 +23,9 @@ This guide provides detailed instructions on how to host and run a `.war` file o
 
    You should see the installed JDK 11 version information.
 
-## Step 2: Installing MySQL Server
+## Step 2: Installing MySQL Server and postgres
+
+##     Installing MySQL
 
 1. Visit the [MySQL Community Downloads page](https://dev.mysql.com/downloads/mysql/) and choose the MySQL Server version that suits your needs (free community edition or paid version).
 
@@ -31,7 +33,7 @@ This guide provides detailed instructions on how to host and run a `.war` file o
 
 3. Start the MySQL Server service and ensure it's running.
 
-## Step 4: Installing postgres
+##     Installing postgres
 
 1. Download postgress based on your OS : https://www.postgresql.org/download/
 2. Follow the installer screen instructions and complete the installation
