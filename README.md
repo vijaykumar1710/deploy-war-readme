@@ -1,13 +1,12 @@
 # deploy-war-readme
 ## Guide: Hosting and Running .war File on Windows with NGINX Reverse Proxy
 
-This guide provides detailed instructions on how to host and run a `.war` file on a Windows machine using NGINX as a reverse proxy to route traffic from a specific domain to your application running on `localhost:8081`. The guide assumes you are using Java version 11 and MySQL Server (free community edition or paid version) as prerequisites.
-
+This guide provides detailed instructions on how to host and run a `.war` file on a Windows machine using NGINX as a reverse proxy to route traffic from a specific domain to your application running on `localhost:8081`. The guide assumes you are using Java version 11 and postgres sql
 ## Prerequisites
 
 - Windows operating system
 - Java Development Kit (JDK) 11 installed
-- MySQL Server (free community edition or paid version) installed
+- postgres sql / MySQL Server (free community edition or paid version) installed ( recommend use postgres )
 - NGINX installed
 
 ## Step 1: Installing Java Development Kit (JDK) 11
@@ -31,6 +30,14 @@ This guide provides detailed instructions on how to host and run a `.war` file o
 2. Run the installer and follow the on-screen instructions to complete the installation. Remember the password you set for the root user.
 
 3. Start the MySQL Server service and ensure it's running.
+
+## Step 4: Installing postgres
+
+1. Download postgress based on your OS : https://www.postgresql.org/download/
+2. Follow the installer screen instructions and complete the installation
+3. Start the postgres Server instance and ensure it's running.
+
+   Using PgAdmin application, You can create server, database , modify , run the queries etc just like mysql workbench
 
 ## Step 3: Installing NGINX
 
